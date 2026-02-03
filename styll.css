@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;             /* Magic line 1 */
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+    min-height: 100vh;         /* Poori screen ki height use karega */
+    background-color: #f0f2f5; /* Background color taaki white card chamke */
+}
+
+    .card {
+        background-color: #ffffff;
+        width: 300px;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        /* Margin hataya kyunki body flex use kar rahi hai center ke liye */
+        box-shadow: 0px 10px 20px rgba(14, 10, 10, 0.1);
+    }
+
+    .card-img {
+        width: 120px;
+        height: 120px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 20px auto;
+        border: 4px solid #6c63ff;
+        padding: 5px;
+        object-fit: cover; /* Important: Image stretch nahi hogi */
+    }
+
+    .card h3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        margin: 10px 0;
+    }
+
+    .card p {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card button {
+        background-color: #6c63ff; 
+        color: white; /* Gray se better white lagega */
+        padding: 10px 25px;
+        border: none;
+        border-radius: 8px;
+        transition: 0.3s; /* Fast and Smooth */
+        box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+        font-weight: bold;
+    }
+
+    .card button:hover {
+        background-color: #5149d1;
+        transform: translateY(-2px); /* Chota sa bounce effect */
+        cursor: pointer;
+    }

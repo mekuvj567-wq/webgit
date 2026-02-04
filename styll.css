@@ -5,7 +5,7 @@ body {
     justify-content: center;    /* Horizontal center */
     align-items: center;        /* Vertical center */
     min-height: 100vh;         /* Poori screen ki height use karega */
-    background-color: #f0f2f5; /* Background color taaki white card chamke */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);/* Background color taaki white card chamke */
 }
 
     .card {
@@ -28,6 +28,7 @@ body {
         border: 4px solid #6c63ff;
         padding: 5px;
         object-fit: cover; /* Important: Image stretch nahi hogi */
+        animation: float 3s ease-in-out infinite;
     }
 
     .card h3 {
@@ -52,9 +53,23 @@ body {
         box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
         font-weight: bold;
     }
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translatey(-10px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
 
     .card button:hover {
         background-color: #5149d1;
-        transform: translateY(-2px); /* Chota sa bounce effect */
+        transform: scale(1.05); /* Chota sa bounce effect */
         cursor: pointer;
+    }
+    .card button:active {
+        transform: scale(0.95);/*click krne pr dbe ga*/
     }
